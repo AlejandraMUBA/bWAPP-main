@@ -4,15 +4,13 @@ on: [push]
 jobs:
   veracode_security_scan:
     runs-on: ubuntu-latest
-    env:
-      using: 'node20'
-      main: 'index.js'
     name: Run Veracode DAST Essentials Scan
     steps:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
        node-version: '20'
+       main: 'index.js'
     - name: Install dependencies
       run: npm install
     - name: Veracode Action Step
