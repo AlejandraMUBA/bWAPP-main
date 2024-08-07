@@ -27,7 +27,7 @@ jobs:
        report_paths: 'report.xml'
        github_token: ${{ secrets.GITHUB_TOKEN }}
 env:
-  using: 'node12'
+  using: 'node20'
   main: 'index.js'
   
        
