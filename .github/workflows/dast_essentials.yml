@@ -10,7 +10,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
        node-version: '20'
-       main: 'index.js'
     - name: Install dependencies
       run: npm install
     - name: Veracode Action Step
