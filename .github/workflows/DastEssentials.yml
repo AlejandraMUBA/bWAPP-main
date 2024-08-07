@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Run Veracode DAST Essentials Scan
     steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+       node-version: '14'
     - name: Veracode Action Step
       id: Veracode 
       uses: veracode/veracode-dast-essentials-action@v1.0.1
