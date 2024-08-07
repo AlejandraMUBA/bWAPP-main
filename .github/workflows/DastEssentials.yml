@@ -20,7 +20,7 @@ jobs:
        VERACODE_SECRET_ID: '${{ secrets.VERACODE_SECRET_ID }}'
        VERACODE_SECRET_ID_KEY: '${{ secrets.VERACODE_SECRET_ID_KEY }}'
        REGION: '${{ secrets.REGION }}'
-       pull-report: 'true'
+       pull-report: 'false'
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v1 
       with:
