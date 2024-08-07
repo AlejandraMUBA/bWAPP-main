@@ -4,6 +4,9 @@ on: [push]
 jobs:
   veracode_security_scan:
     runs-on: ubuntu-latest
+    env:
+      using: 'node12'
+      main: 'index.js'
     name: Run Veracode DAST Essentials Scan
     steps:
     - name: Veracode Action Step
@@ -20,7 +23,6 @@ jobs:
       with:
        report_paths: 'report.xml'
        github_token: ${{ secrets.GITHUB_TOKEN }}
-env:
-  using: 'node12'
-  main: 'index.js'
+ 
+  
        
